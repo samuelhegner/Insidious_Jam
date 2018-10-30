@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D rb;
 
     public float forceScale;
+    public float maxVelocity;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,8 @@ public class PlayerMovement : MonoBehaviour {
 
             rb.AddForce(Direction * forceScale, ForceMode2D.Impulse);
 
+
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
 
         }
 
