@@ -33,7 +33,7 @@ public class GAME_MANAGER : MonoBehaviour {
                if (!InShadow) {
 
                     CurrentHealth -= HealthDecay * Time.deltaTime;
-                    Debug.Log("Decaying");
+                    //Debug.Log("Decaying");
                     
 
                } else {

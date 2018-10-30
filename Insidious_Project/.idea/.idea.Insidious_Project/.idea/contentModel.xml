@@ -12,6 +12,7 @@
         <e p="KillEnemy.cs" t="Include" />
         <e p="LerpCamPos.cs" t="Include" />
         <e p="PlayerMovement.cs" t="Include" />
+        <e p="SoulCollectable.cs" t="Include" />
         <e p="TargetPositioner.cs" t="Include" />
         <e p="UIUpdater.cs" t="Include" />
       </e>
