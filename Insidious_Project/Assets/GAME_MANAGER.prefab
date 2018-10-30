@@ -350,10 +350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 100
   CurrentRage: 0
-  HealthDecay: 10
+  HealthDecay: 3
   InShadow: 0
   PlayerMaxhealth: 100
-  Raged: 0
   RageTarget: 100
   BlobPlayer: {fileID: 0}
   RagePlayer: {fileID: 0}

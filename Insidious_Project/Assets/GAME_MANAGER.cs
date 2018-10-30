@@ -44,7 +44,7 @@ public class GAME_MANAGER : MonoBehaviour {
                } else {
                     
                     if (CurrentHealth < PlayerMaxhealth)
-                         CurrentHealth += HealthDecay * Time.deltaTime;
+                         CurrentHealth += HealthDecay * 3  * Time.deltaTime;
                     else
                          CurrentHealth = PlayerMaxhealth;
 
@@ -115,15 +115,6 @@ public class GAME_MANAGER : MonoBehaviour {
 
      }
 
-     private void OnTriggerStay2D(Collider2D other) {
-
-          if (other.CompareTag("Torch")) {
-
-
-               CurrentHealth -= HealthDecay * 2 * Time.fixedDeltaTime;
-               
-               
-          }
-     }
+     
 
 }

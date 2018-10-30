@@ -70,4 +70,16 @@ public class Blob_Player_Controller : MonoBehaviour {
 
 
      }
+
+
+     private void OnTriggerStay2D(Collider2D other) {
+
+          if (other.CompareTag("Torch")) {
+
+
+              GAME_MANAGER.GM.CurrentHealth -= GAME_MANAGER.GM.HealthDecay * 4 * Time.fixedDeltaTime;
+
+
+          }
+     }
 }
