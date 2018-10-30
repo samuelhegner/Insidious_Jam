@@ -11,6 +11,6 @@ public class RotateTowards : MonoBehaviour {
         Vector3 toVector = transform.parent.GetComponent<Rigidbody2D>().velocity.normalized;
         float angle = Mathf.Atan2(toVector.y, toVector.x) * Mathf.Rad2Deg;
         Quaternion NewRot = Quaternion.AngleAxis(angle + offSet, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, NewRot, Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, NewRot, Time.deltaTime * 1.5f);
     }
 }

@@ -16,7 +16,7 @@ public class GAME_MANAGER : MonoBehaviour {
 
      public float PlayerMaxhealth;
 
-     public bool Raged;
+     public static bool Raged;
 
      public float RageTarget;
 
