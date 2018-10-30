@@ -15,6 +15,13 @@
         <e p="RotateTowards.cs" t="Include" />
         <e p="SoulCollectable.cs" t="Include" />
         <e p="SoulRespawn.cs" t="Include" />
+        <e p="Sounds" t="Include">
+          <e p="Audio_Scripts" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="Journey_Audio_Player.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+          </e>
+        </e>
         <e p="TargetPositioner.cs" t="Include" />
         <e p="UIUpdater.cs" t="Include" />
       </e>
