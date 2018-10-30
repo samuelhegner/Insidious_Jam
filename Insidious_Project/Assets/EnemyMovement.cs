@@ -7,6 +7,8 @@ public class EnemyMovement : MonoBehaviour {
     public float runSpeed;
     public float patrolSpeed;
 
+    public bool Guard;
+
     List<GameObject>waypoints = new List<GameObject>();
 
     Rigidbody2D rb;
@@ -17,7 +19,8 @@ public class EnemyMovement : MonoBehaviour {
 
     public enum EnemyState{
         patrol,
-        idle, 
+        idle,
+        idleRage, 
         flee
     }
 
@@ -26,7 +29,9 @@ public class EnemyMovement : MonoBehaviour {
      void Awake()
     {
         for (int i = 0; i < transform.childCount; i++){
+            
             GameObject child = transform.GetChild(i).gameObject;
+            if(child.transform.tag != "Flash")
             waypoints.Add(child);
         }
 
@@ -44,7 +49,7 @@ public class EnemyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if(currentState == EnemyState.idle){
+        if(currentState == EnemyState.idleRage){
             rb.velocity = Vector2.zero;
 
             if(Vector2.Distance(transform.position, player.transform.position) < 5f){
@@ -66,12 +71,17 @@ public class EnemyMovement : MonoBehaviour {
 
             if (Vector2.Distance(transform.position, player.transform.position) > 5f)
             {
-                currentState = EnemyState.idle;
+                currentState = EnemyState.idleRage;
             }
 
             if (GAME_MANAGER.GM.Raged == false){
-                currentState = EnemyState.patrol;
-                waypoint = GetNearestWaypoint(transform.position);
+                if(Guard){
+                    currentState = EnemyState.patrol;
+                    waypoint = GetNearestWaypoint(transform.position);
+                }else{
+                    currentState = EnemyState.idle;
+                }
+
             }
 
 
@@ -82,6 +92,11 @@ public class EnemyMovement : MonoBehaviour {
             rb.velocity = toWaypoint * patrolSpeed;
             if (Vector2.Distance(transform.position, waypoints[waypoint].transform.position) < 1){
                 waypoint = (waypoint + 1) % waypoints.Count;
+            }
+        }else if(currentState == EnemyState.idle){
+            rb.velocity = Vector2.zero;
+            if(GAME_MANAGER.GM.Raged){
+                currentState = EnemyState.idleRage;
             }
         }
 	}
