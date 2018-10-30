@@ -4,41 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float speed;
+    Rigidbody2D rb;
 
-    Rigidbody2D body;
-
-    float hInput;
-    float vInput;
+    public float forceScale;
 
 	// Use this for initialization
 	void Start () {
-        body = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        hInput = Input.GetAxis("Horizontal");
-        vInput = Input.GetAxis("Vertical");
-
-        if (Mathf.Abs(body.velocity.y) < 10f)
+	void FixedUpdate () {
+        if (Input.GetMouseButtonDown(0))
         {
-            VerticalStrave(speed * Time.deltaTime);
-        }    
+
+            Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 Direction = targetPos - (Vector2)transform.position;
+
+            Direction.Normalize();
+
+            rb.AddForce(Direction * forceScale, ForceMode2D.Impulse);
 
 
-        if(Mathf.Abs(body.velocity.x) < 10f){
-            HorizontalStrave(speed * Time.deltaTime);
         }
 
     }
 
-    void VerticalStrave(float unit){
-            body.AddForce(new Vector2(0, unit * vInput));
-    }
-
-    void HorizontalStrave(float unit) {
-
-        body.AddForce(new Vector2(unit * hInput, 0));
-    }
 }
