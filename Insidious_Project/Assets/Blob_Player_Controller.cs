@@ -5,7 +5,7 @@ public class Blob_Player_Controller : MonoBehaviour {
 
      public float forceScale;
 
-     public bool InShadow;
+    // public bool InShadow;
 
      private bool shooting;
      
@@ -59,14 +59,14 @@ public class Blob_Player_Controller : MonoBehaviour {
 
      private void OnTriggerEnter2D(Collider2D other) {
 
-          if (other.CompareTag("Shadow")) InShadow = true;
+          if (other.CompareTag("Shadow")) GAME_MANAGER.GM.InShadow = true;
 
      }
 
 
      private void OnTriggerExit2D(Collider2D other) {
 
-          if (other.CompareTag("Shadow")) InShadow = false;
+          if (other.CompareTag("Shadow")) GAME_MANAGER.GM.InShadow = false;
 
 
      }

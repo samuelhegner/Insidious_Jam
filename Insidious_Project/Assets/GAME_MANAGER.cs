@@ -1,28 +1,51 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class GAME_MANAGER : MonoBehaviour {
 
-	public float PLayerMaxhealth;
+     public static GAME_MANAGER GM;
 
-	public float CurrentHealth;
+     public float CurrentHealth;
 
-	public float CurrentRage;
+     public float CurrentRage;
 
-	public float RageTarget;
+     public float HealthDecay;
 
-	public bool Raged;
+     public bool InShadow;
 
-	public static GAME_MANAGER GM;
-	
-	void Start () {
+     public float PlayerMaxhealth;
 
-		GM = this;
+     public bool Raged;
+
+     public float RageTarget;
+
+     private void Start() {
+
+          GM = this;
 
 
+     }
 
-	}
-	
-	
+
+     private void Update() {
+
+          if (!Raged) {
+               if (!InShadow) {
+
+                    CurrentHealth -= HealthDecay * Time.deltaTime;
+                    Debug.Log("Decaying");
+                    
+
+               } else {
+                    
+                    if (CurrentHealth < PlayerMaxhealth)
+                         CurrentHealth += HealthDecay * Time.deltaTime;
+                    else
+                         CurrentHealth = PlayerMaxhealth;
+
+               }
+
+
+          }
+     }
 }
