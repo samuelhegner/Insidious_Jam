@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Blob_Player_Controller.cs" t="Include" />
         <e p="EnemyMovement.cs" t="Include" />
+        <e p="FadeOut.cs" t="Include" />
         <e p="GAME_MANAGER.cs" t="Include" />
         <e p="KillEnemy.cs" t="Include" />
         <e p="LerpCamPos.cs" t="Include" />
@@ -15,6 +16,12 @@
         <e p="RotateTowards.cs" t="Include" />
         <e p="SoulCollectable.cs" t="Include" />
         <e p="SoulRespawn.cs" t="Include" />
+        <e p="Sounds" t="Include">
+          <e p="Audio_Scripts" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+          </e>
+        </e>
         <e p="TargetPositioner.cs" t="Include" />
         <e p="UIUpdater.cs" t="Include" />
       </e>
