@@ -18,7 +18,14 @@ public class LerpCamPos : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        posToMove = new Vector3(player.transform.position.x, player.transform.position.y, -10f);
+
+		if (!player.activeSelf) {
+
+			player = GameObject.FindWithTag("Player");
+			
+		}
+
+		posToMove = new Vector3(player.transform.position.x, player.transform.position.y, -10f);
 
         transform.position = Vector3.Lerp(transform.position, posToMove, Time.deltaTime * lerpSpeed);
 	}

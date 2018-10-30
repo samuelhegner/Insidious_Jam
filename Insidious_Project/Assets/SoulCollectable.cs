@@ -9,7 +9,9 @@ public class SoulCollectable : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Soul")) {
 
-			Destroy(other.gameObject);
+			//Destroy(other.gameObject);
+			
+			other.GetComponent<SoulRespawn>().Collected();
 
 			GAME_MANAGER.GM.CurrentRage += rageInc;
 

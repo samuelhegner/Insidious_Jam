@@ -7,6 +7,7 @@ TagManager:
   - Shadow
   - Flash
   - Torch
+  - Soul
   layers:
   - Default
   - TransparentFX
