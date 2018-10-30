@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KillEnemy : MonoBehaviour {
 
+    public GameObject pref;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +20,7 @@ public class KillEnemy : MonoBehaviour {
     {
         if(other.transform.tag == "Enemy")
         {
+            Instantiate(pref, other.transform.position, other.transform.rotation);
             Destroy(other.transform.gameObject);
         }
     }
