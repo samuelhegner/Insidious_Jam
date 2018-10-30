@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="226">
+              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding>
                 <marker date="1540908745302" expanded="true" signature="63:900" ph="{...}" />
                 <marker date="1540908745302" expanded="true" signature="347:379" ph="{...}" />
@@ -95,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/LerpCamPos.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -188,7 +188,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="55" />
     <option name="width" value="1485" />
@@ -256,12 +256,12 @@
       <workItem from="1540899706067" duration="32000" />
       <workItem from="1540899790489" duration="1939000" />
       <workItem from="1540901762900" duration="34000" />
-      <workItem from="1540902106038" duration="5161000" />
+      <workItem from="1540902106038" duration="5492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7214000" />
+    <option name="totallyTimeSpent" value="7545000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,20 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <marker date="1540908745302" expanded="true" signature="63:900" ph="{...}" />
-            <marker date="1540908745302" expanded="true" signature="347:379" ph="{...}" />
-            <marker date="1540908745302" expanded="true" signature="409:898" ph="{...}" />
-            <marker date="1540908745302" expanded="true" signature="434:891" ph="{...}" />
-            <marker date="1540908745302" expanded="true" signature="466:619" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SoulCollectable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -414,6 +400,20 @@
             <marker date="1540909281162" expanded="true" signature="120:564" ph="{...}" />
             <marker date="1540909281162" expanded="true" signature="247:302" ph="{...}" />
             <marker date="1540909281162" expanded="true" signature="358:562" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <marker date="1540908745302" expanded="true" signature="63:900" ph="{...}" />
+            <marker date="1540908745302" expanded="true" signature="347:379" ph="{...}" />
+            <marker date="1540908745302" expanded="true" signature="409:898" ph="{...}" />
+            <marker date="1540908745302" expanded="true" signature="434:891" ph="{...}" />
+            <marker date="1540908745302" expanded="true" signature="466:619" ph="{...}" />
           </folding>
         </state>
       </provider>
