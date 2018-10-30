@@ -14,10 +14,11 @@ public class KillEnemy : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.transform.tag == "Player"){
-            Destroy(gameObject);
+        if(other.transform.tag == "Enemy")
+        {
+            Destroy(other.transform.gameObject);
         }
     }
 }
