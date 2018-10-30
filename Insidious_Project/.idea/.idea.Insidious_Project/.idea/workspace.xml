@@ -23,33 +23,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="653" />
+          <entry key="cs" value="986" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="653" />
+          <entry key="C#" value="986" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="2" />
+          <entry key="cs" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="2" />
+          <entry key="C#" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Blob_Player_Controller.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="43" column="46" lean-forward="true" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
               <folding>
                 <marker date="1540902788093" expanded="true" signature="73:1358" ph="{...}" />
                 <marker date="1540902788093" expanded="true" signature="262:388" ph="{...}" />
@@ -64,13 +64,27 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <marker date="1540904084209" expanded="false" signature="6:78" ph="..." />
+                <marker date="1540904084209" expanded="true" signature="122:339" ph="{...}" />
+                <marker date="1540904084209" expanded="true" signature="312:333" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <marker date="1540901783037" expanded="false" signature="6:78" ph="..." />
-                <marker date="1540901783037" expanded="true" signature="124:672" ph="{...}" />
+                <marker date="1540903011568" expanded="false" signature="6:78" ph="..." />
+                <marker date="1540903011568" expanded="true" signature="124:779" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -99,6 +113,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/TargetPositioner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Blob_Player_Controller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -106,6 +121,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/TargetPositioner.cs" />
         <option value="$PROJECT_DIR$/Assets/Blob_Player_Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/GAME_MANAGER.cs" />
       </list>
     </option>
   </component>
@@ -183,12 +199,12 @@
       <workItem from="1540899706067" duration="32000" />
       <workItem from="1540899790489" duration="1939000" />
       <workItem from="1540901762900" duration="34000" />
-      <workItem from="1540902106038" duration="677000" />
+      <workItem from="1540902106038" duration="1958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2730000" />
+    <option name="totallyTimeSpent" value="4011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,8 +281,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1540901783037" expanded="false" signature="6:78" ph="..." />
-            <marker date="1540901783037" expanded="true" signature="124:672" ph="{...}" />
+            <marker date="1540903011568" expanded="false" signature="6:78" ph="..." />
+            <marker date="1540903011568" expanded="true" signature="124:779" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -274,7 +290,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Blob_Player_Controller.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="43" column="46" lean-forward="true" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding>
             <marker date="1540902788093" expanded="true" signature="73:1358" ph="{...}" />
             <marker date="1540902788093" expanded="true" signature="262:388" ph="{...}" />
@@ -284,6 +300,18 @@
             <marker date="1540902788093" expanded="true" signature="1032:1106" ph="{...}" />
             <marker date="1540902788093" expanded="true" signature="1161:1230" ph="{...}" />
             <marker date="1540902788093" expanded="true" signature="1285:1356" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GAME_MANAGER.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <marker date="1540904084209" expanded="false" signature="6:78" ph="..." />
+            <marker date="1540904084209" expanded="true" signature="122:339" ph="{...}" />
+            <marker date="1540904084209" expanded="true" signature="312:333" ph="{...}" />
           </folding>
         </state>
       </provider>
