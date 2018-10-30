@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: ab3101c3e51ce92458d40d59b4fefe1b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Demon Form_0
+    21300002: Demon Form_1
+    21300004: Demon Form_2
+    21300006: Demon Form_3
+    21300008: Demon Form_4
+    21300010: Demon Form_5
+    21300012: Demon Form_6
+    21300014: Demon Form_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +48,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +77,213 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Demon Form_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 718
+        width: 420
+        height: 277
+      alignment: 9
+      pivot: {x: 0.44702104, y: 0.3821841}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bc4fe586deca941a205089e8a1a61b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 322
+        width: 178
+        height: 320
+      alignment: 9
+      pivot: {x: 0.45833126, y: 0.7874115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79ba73556c8fd649b6aa256791d7296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 273
+        width: 184
+        height: 403
+      alignment: 9
+      pivot: {x: 0.43550375, y: 0.8496881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2585925db7792114f83fb83ab7561930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_3
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 666
+        width: 215
+        height: 263
+      alignment: 9
+      pivot: {x: 0.769085, y: 0.8271408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e280e09490433419366999bc6c4774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_4
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 173
+        width: 125
+        height: 169
+      alignment: 9
+      pivot: {x: 0.58307225, y: 0.7633286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9484282e81dcfd4e92c9b2828e6efd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_5
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 21
+        width: 124
+        height: 107
+      alignment: 9
+      pivot: {x: 0.30859226, y: 0.52772814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6d7e2fe28132d4b887d173518e62ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1
+        width: 153
+        height: 139
+      alignment: 9
+      pivot: {x: 0.79086566, y: 0.54268825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a194e9f27120f68459794aa0c3d9973e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon Form_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 23
+        width: 163
+        height: 123
+      alignment: 9
+      pivot: {x: 0.70931596, y: 0.5482418}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10618bb4a895e6345a628643e42345a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
