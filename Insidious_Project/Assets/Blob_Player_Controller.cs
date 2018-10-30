@@ -1,45 +1,73 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class Blob_Player_Controller : MonoBehaviour {
 
-Rigidbody2D rb;
+     public float forceScale;
 
-	public float forceScale;
-	
-	// Use this for initialization
-	void Start () {
+     public bool InShadow;
 
-		rb = GetComponent<Rigidbody2D>();
+     private bool shooting;
+     
+     private Rigidbody2D rb;
+
+
+     // Use this for initialization
+     private void Start() {
+
+          rb = GetComponent<Rigidbody2D>();
 
 //		rb.AddForce(new Vector2(-0.1f, -0.9f) * 20, ForceMode2D.Impulse );
 
-	}
+     }
 
 
-	private void FixedUpdate() {
+     private void FixedUpdate() {
 
-		if (Input.GetMouseButtonDown(0)) {
+          if (!shooting && Input.GetMouseButtonDown(0)) {
 
-			Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+               Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-			Vector2 Direction = targetPos - (Vector2) transform.position;
+               var Direction = targetPos - (Vector2) transform.position;
 
-Direction.Normalize();
+               Direction.Normalize();
 
-			rb.AddForce(Direction * forceScale, ForceMode2D.Impulse);
-			
-			
-		}
+               rb.AddForce(Direction * forceScale, ForceMode2D.Impulse);
 
-
-	}
+               shooting = true;
 
 
-	private void OnCollisionEnter2D(Collision2D other) {
-		rb.velocity = Vector2.zero;
-	}
+
+          }
 
 
+          if (rb.velocity.magnitude <= 0.3f) {
+
+               rb.velocity = Vector2.zero;
+               shooting    = false;
+               
+          }
+
+
+     }
+
+
+     private void OnCollisionEnter2D(Collision2D other) {
+          rb.velocity = Vector2.zero;
+          shooting = false;
+     }
+
+     private void OnTriggerEnter2D(Collider2D other) {
+
+          if (other.CompareTag("Shadow")) InShadow = true;
+
+     }
+
+
+     private void OnTriggerExit2D(Collider2D other) {
+
+          if (other.CompareTag("Shadow")) InShadow = false;
+
+
+     }
 }

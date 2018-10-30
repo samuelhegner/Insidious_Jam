@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Blob_Player_Controller.cs" t="Include" />
+        <e p="PlayerMovement.cs" t="Include" />
         <e p="TargetPositioner.cs" t="Include" />
       </e>
       <e p="Insidious_Project.sln" t="IncludeFlat" />
