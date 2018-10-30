@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212775198827275976}
   - component: {fileID: 95387242141339564}
   m_Layer: 0
-  m_Name: blob boy prefab
+  m_Name: blob boy sprite sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
