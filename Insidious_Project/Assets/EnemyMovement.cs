@@ -5,10 +5,15 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
 
     public float runSpeed;
+    public float patrolSpeed;
+
+    List<GameObject>waypoints = new List<GameObject>();
 
     Rigidbody2D rb;
 
     GameObject player;
+
+    int waypoint;
 
     public enum EnemyState{
         patrol,
@@ -18,8 +23,20 @@ public class EnemyMovement : MonoBehaviour {
 
     public EnemyState currentState;
 
-	// Use this for initialization
-	void Start () {
+     void Awake()
+    {
+        for (int i = 0; i < transform.childCount; i++){
+            GameObject child = transform.GetChild(i).gameObject;
+            waypoints.Add(child);
+        }
+
+        foreach(GameObject gm in waypoints){
+            gm.transform.parent = null;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentState = EnemyState.flee;
@@ -34,7 +51,14 @@ public class EnemyMovement : MonoBehaviour {
                 currentState = EnemyState.flee;
             }
 
-        }else if(currentState == EnemyState.flee){
+            if (GAME_MANAGER.GM.Raged == false)
+            {
+                currentState = EnemyState.patrol;
+                waypoint = GetNearestWaypoint(transform.position);
+            }
+
+        }
+        else if(currentState == EnemyState.flee){
             Vector2 fleedDir = (transform.position - player.transform.position);
             fleedDir.Normalize();
 
@@ -44,6 +68,36 @@ public class EnemyMovement : MonoBehaviour {
             {
                 currentState = EnemyState.idle;
             }
+
+            if (GAME_MANAGER.GM.Raged == false){
+                currentState = EnemyState.patrol;
+                waypoint = GetNearestWaypoint(transform.position);
+            }
+
+
+        }
+        else if(currentState == EnemyState.patrol){
+            Vector2 toWaypoint = waypoints[waypoint].transform.position - transform.position;
+            toWaypoint.Normalize();
+            rb.velocity = toWaypoint * patrolSpeed;
+            if (Vector2.Distance(transform.position, waypoints[waypoint].transform.position) < 1){
+                waypoint = (waypoint + 1) % waypoints.Count;
+            }
         }
 	}
+
+    int GetNearestWaypoint(Vector2 currentPos){
+
+        int index = 0;
+
+        float closestDist = float.MaxValue;
+
+        for (int i = 0; i < waypoints.Count; i++){
+            if(Vector2.Distance(currentPos, waypoints[i].transform.position) < closestDist){
+                index = i;
+            }
+        }
+
+        return index;
+    }
 }
