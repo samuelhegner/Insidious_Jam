@@ -56,7 +56,7 @@ public class EnemyMovement : MonoBehaviour {
                 currentState = EnemyState.flee;
             }
 
-            if (GAME_MANAGER.GM.Raged == false)
+            if (GAME_MANAGER.Raged == false)
             {
                 currentState = EnemyState.patrol;
                 waypoint = GetNearestWaypoint(transform.position);
@@ -74,7 +74,7 @@ public class EnemyMovement : MonoBehaviour {
                 currentState = EnemyState.idleRage;
             }
 
-            if (GAME_MANAGER.GM.Raged == false){
+            if (GAME_MANAGER.Raged == false){
                 if(Guard){
                     currentState = EnemyState.patrol;
                     waypoint = GetNearestWaypoint(transform.position);
@@ -93,9 +93,16 @@ public class EnemyMovement : MonoBehaviour {
             if (Vector2.Distance(transform.position, waypoints[waypoint].transform.position) < 1){
                 waypoint = (waypoint + 1) % waypoints.Count;
             }
-        }else if(currentState == EnemyState.idle){
+
+            if (GAME_MANAGER.Raged == true)
+            {
+                currentState = EnemyState.idleRage;
+            }
+
+        }
+        else if(currentState == EnemyState.idle){
             rb.velocity = Vector2.zero;
-            if(GAME_MANAGER.GM.Raged){
+            if(GAME_MANAGER.Raged == true){
                 currentState = EnemyState.idleRage;
             }
         }
