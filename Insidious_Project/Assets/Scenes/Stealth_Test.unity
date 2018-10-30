@@ -2998,6 +2998,8 @@ MonoBehaviour:
   PlayerMaxhealth: 100
   Raged: 0
   RageTarget: 100
+  BlobPlayer: {fileID: 871018690}
+  RagePlayer: {fileID: 0}
 --- !u!114 &2107757000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3168,6 +3170,15 @@ Tilemap:
   m_GameObject: {fileID: 2128840729}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 6, y: -20, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 2
   - first: {x: -9, y: -4, z: 0}
     second:
       m_TileIndex: 0
@@ -3649,11 +3660,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 53
     m_Data: {fileID: 11400000, guid: 4f51be9adc7297343926b870bd74f48a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 2db24b7581902e64b9e274395e0dcf2c, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 53
     m_Data: {fileID: 21300000, guid: 6780d476724384b45b92769546a8cdf7, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 1d5f9dfc863260a4c84bb8983b162212, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 53
+  - m_RefCount: 54
     m_Data:
       e00: 1
       e01: 0
@@ -3672,12 +3687,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 53
+  - m_RefCount: 54
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_Origin: {x: -13, y: -4, z: 0}
-  m_Size: {x: 23, y: 10, z: 1}
+  m_Origin: {x: -13, y: -20, z: 0}
+  m_Size: {x: 23, y: 26, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

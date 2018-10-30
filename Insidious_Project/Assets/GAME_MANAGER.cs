@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GAME_MANAGER : MonoBehaviour {
@@ -18,6 +19,10 @@ public class GAME_MANAGER : MonoBehaviour {
      public bool Raged;
 
      public float RageTarget;
+
+
+     public GameObject BlobPlayer;
+     public GameObject RagePlayer;
 
      private void Start() {
 
@@ -45,7 +50,80 @@ public class GAME_MANAGER : MonoBehaviour {
 
                }
 
+               if (CurrentRage >= RageTarget) {
+
+                    changeForm();
+                    
+                    
+                    
+               }
+
+
+
+
+          } else {
+
+
+               CurrentRage -= HealthDecay * Time.deltaTime;
+
+               if (CurrentRage <= 0f) {
+
+                    CurrentRage = 0;
+                    
+                    changeForm();
+
+               }
+
 
           }
+
+
+
+          if (CurrentHealth <= 0f) {
+
+               //todo: GO COMMIT DIE
+               
+               SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+               
+               
+          }
+
      }
+
+     private void changeForm() {
+
+          if (Raged) {
+
+
+               BlobPlayer.transform.position = RagePlayer.transform.position;
+
+               BlobPlayer.SetActive(true);
+               RagePlayer.SetActive(false);
+
+          } else {
+
+               RagePlayer.transform.position = BlobPlayer.transform.position;
+
+               BlobPlayer.SetActive(false);
+               RagePlayer.SetActive(true);
+               
+          }
+
+
+          Raged = !Raged;
+
+
+     }
+
+     private void OnTriggerStay2D(Collider2D other) {
+
+          if (other.CompareTag("Torch")) {
+
+
+               CurrentHealth -= HealthDecay * 2 * Time.fixedDeltaTime;
+               
+               
+          }
+     }
+
 }
