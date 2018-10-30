@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: GreenSquare
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 1d5f9dfc863260a4c84bb8983b162212, type: 3}
-  m_Color: {r: 0.10790518, g: 0.990566, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 31d9cd01bf6de1446aa5aa2f1750341e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
